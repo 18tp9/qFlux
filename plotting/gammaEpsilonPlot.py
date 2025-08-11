@@ -4,6 +4,13 @@ import matplotlib.pyplot as pl
 import seaborn as sns
 import os
 
+import sys
+from pathlib import Path
+
+# Add parent directory to sys.path to avoid relative import error
+parent_dir = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(parent_dir))
+
 from OptModule.Dependencies.HDF5.HDF5_Generic import HDF5data
 from OptModule.Dependencies.Tools.Error_Analysis import error_analysis
 from OptModule.Dependencies.EquationSolvers.Loop_Data import DataManager

@@ -4,7 +4,15 @@ import matplotlib.pyplot as pl
 from matplotlib import colors
 import seaborn as sns
 import os
-# import sys
+
+
+import sys
+from pathlib import Path
+
+# Add parent directory to sys.path to avoid relative import error
+parent_dir = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(parent_dir))
+
 from OptModule.Dependencies.HDF5.HDF5_Generic import HDF5data
 from OptModule.Dependencies.EquationSolvers.DiffusionSolver_base.Operators import Operator
 from OptModule.Parameters import shared_parameters as params

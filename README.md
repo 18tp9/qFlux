@@ -1,2 +1,2 @@
 # qFlux
-Code repository for Computers & Geosciences paper
+Code repository for upcoming Computers & Geosciences paper
